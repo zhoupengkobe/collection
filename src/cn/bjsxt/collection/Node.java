@@ -2,38 +2,52 @@ package cn.bjsxt.collection;
 
 //用来表示一个节点
 public class Node{
-	private Object previous;  //上一个
-	private Object obj; //自己的值
-	private Object next; //下一个
+	 Node previous;  //上一个
+	 Object obj; //自己的值
+	 Node next; //下一个
 	
 	public Node(){
 		
 	}
 	
-	public Node(Object previous, Object obj, Object next) {
+	
+	public Node(Node previous, Object obj, Node next) {
 		super();
 		this.previous = previous;
 		this.obj = obj;
 		this.next = next;
 	}
-	public Object getPrevious() {
+
+
+	public Node getPrevious() {
 		return previous;
 	}
-	public void setPrevious(Object previous) {
+
+
+	public void setPrevious(Node previous) {
 		this.previous = previous;
 	}
+
+
 	public Object getObj() {
 		return obj;
 	}
+
+
 	public void setObj(Object obj) {
 		this.obj = obj;
 	}
-	public Object getNext() {
+
+
+	public Node getNext() {
 		return next;
 	}
-	public void setNext(Object next) {
+
+
+	public void setNext(Node next) {
 		this.next = next;
 	}
 	
 	
+
 }
