@@ -62,10 +62,23 @@ public class SxtLinkedList {
 	public Node node(int index) {
 		Node temp = null;
 		if (first!=null) {
-			temp = first;
-			for (int i = 0; i < index; i++) {
-				temp = temp.next;
+			if (index < (size >> 1)) {
+				
+				temp = first;
+				//size:50 2 48 [0,49]
+				//index size/2
+				for (int i = 0; i < index; i++) {
+					temp = temp.next;
+				}
+			}else {
+				temp = last;
+				for (int i = size-1; i > index; i--) {
+					temp = temp.previous;
+					
+				}
 			}
+			
+			
 		}
 		return temp;
 	}
@@ -105,10 +118,11 @@ public class SxtLinkedList {
 		
 		list.add("aaaa");
 		list.add("bbbb");
-		list.add(1, "dddd");
+//		list.add(1, "dddd");
 		list.add("cccc");
+		list.add("eeee");
 //		list.remove(1);
-		System.out.println(list.get(1));
+		System.out.println(list.get(2));
 	}
 
 }
