@@ -15,8 +15,9 @@ public class SxtMap002 {
 	
 	public void put(Object key,Object value){
 		SxtEntry e = new SxtEntry(key, value);
-		
-		int a = key.hashCode()%arr.length;
+		int hash = key.hashCode();
+		hash = hash<0?-hash:hash;//如果是负数就取反，如果不是就直接赋值
+		int a = hash%arr.length;
 		if (arr[a]==null) {
 			LinkedList list = new LinkedList();
 			arr[a] = list;
