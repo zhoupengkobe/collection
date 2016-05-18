@@ -8,7 +8,7 @@ public class SxtLinkedList {
 	
 	
 
-	private void add(Object obj) {
+	public void add(Object obj) {
 		Node n = new Node();
 
 		if (first==null) {
