@@ -1,4 +1,4 @@
-package iterator;
+package cn.bjsxt.iterator;
 
 
 import java.util.ArrayList;
